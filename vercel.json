@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/workato.js": {
+      "maxDuration": 30
+    }
+  }
+}
