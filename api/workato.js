@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // CORS: permite llamadas desde tu dominio de Lovable
+  // CORS: permite llamadas 
   res.setHeader("Access-Control-Allow-Origin", process.env.ALLOWED_ORIGIN || "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -15,7 +15,6 @@ export default async function handler(req, res) {
         "API-Token": process.env.WORKATO_API_KEY,
         "Content-Type": "application/json",
       },
-      // Reenvía el body si es POST
       body: req.method !== "GET" ? JSON.stringify(req.body) : undefined,
     });
 
